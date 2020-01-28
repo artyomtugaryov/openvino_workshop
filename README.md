@@ -1,1 +1,1 @@
-# openvino_workshop
+# Openvino Workshop
