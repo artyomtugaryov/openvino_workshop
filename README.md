@@ -39,6 +39,7 @@
     cd ${INTEL_OPENVINO_DIR}/deployment_tools/tools/post_training_optimization_toolkit
     python setup.py install
 ```
+
     4.3 Install dependencies for the Model Downloader
 
 ```bash
