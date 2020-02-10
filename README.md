@@ -34,15 +34,17 @@
     cd ${INTEL_OPENVINO_DIR}/deployment_tools/tools/post_training_optimization_toolkit
     python setup.py install
     # Install dependencies for the Model Downloader
-    cd ${INTEL_OPENVINO_DIR}/deployment_tools/open_model_zoo/tools/downloader/
-    pip install -r requirements.in
+    pip install -r ${INTEL_OPENVINO_DIR}/deployment_tools/open_model_zoo/tools/downloader/requirements.in
     # Install dependencies for the Model Optimizer
-    cd ${INTEL_OPENVINO_DIR}/deployment_tools/model_optimizer/
-    pip install -r requirements.txt
+    pip install -r ${INTEL_OPENVINO_DIR}/deployment_tools/model_optimizer/requirements.txt
 ```
 
 5. Install workshop dependencies:
 
 ```bash
     pip install -r requirements.txt
+```
+6. Run the notebook:
+```bash
+   jupyter notebook
 ```
