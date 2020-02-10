@@ -7,11 +7,13 @@
 """bash
     source ~/intel/openvino/bin/setupvars.sh
 """
+
 2. Clone the repository
 
 """bash
     git clone https://github.com/artyomtugaryov/openvino_workshop.git
 """
+
 3. Create Virtual environment for python3:
 
 """bash
@@ -21,6 +23,7 @@
 
     source env/bin/activate
 """
+
 4. Install OpenVINO python dependencies:
 
 """bash
@@ -37,6 +40,7 @@
     cd ${INTEL_OPENVINO_DIR}/deployment_tools/model_optimizer/
     pip install -r requirements.txt
 """
+
 5. Install workshop dependencies:
 
 """bash
