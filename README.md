@@ -3,10 +3,12 @@
 ## How to run the workshop
 
 1. Install OpenVINO and activate environment:
+
 """bash
     source ~/intel/openvino/bin/setupvars.sh
 """
 2. Clone the repository
+
 """bash
     git clone https://github.com/artyomtugaryov/openvino_workshop.git
 """
@@ -36,6 +38,7 @@
     pip install -r requirements.txt
 """
 5. Install workshop dependencies:
+
 """bash
     pip install -r requirements.txt
 """
