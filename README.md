@@ -27,10 +27,10 @@
 4. Install OpenVINO python dependencies:
 
     4.1  Install Accuracy Checker
-```bash
-    cd ${INTEL_OPENVINO_DIR}/deployment_tools/open_model_zoo/tools/accuracy_checker/
-    python setup.py install
-```
+    ```bash
+        cd ${INTEL_OPENVINO_DIR}/deployment_tools/open_model_zoo/tools/accuracy_checker/
+        python setup.py install
+    ```
 
     4.2 Install Post-Training Optimization Toolkit
 ```bash
