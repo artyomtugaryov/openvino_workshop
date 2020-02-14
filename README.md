@@ -54,7 +54,14 @@
 ```bash
     pip install -r requirements.txt
 ```
-6. Run the notebook:
+
+6. Install `gettext-base` package for using envsubst:
+
+```
+    apt-get install gettext-base
+```
+
+7. Run the notebook:
 ```bash
    jupyter notebook
 ```
