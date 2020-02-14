@@ -1,0 +1,27 @@
+models:
+    - name:  ssd_mobilenet_v2_coco
+      launchers:
+        - framework: dlsdk
+          tags:
+            - FP32
+          model: ${WORKSHOP_PATH}/data/public/ssd_mobilenet_v2_coco/INT8/default/optimized/ssd_mobilenet_v2_coco.xml
+          weights: ${WORKSHOP_PATH}/data/public/ssd_mobilenet_v2_coco/INT8/default/optimized/ssd_mobilenet_v2_coco.bin
+          adapter: ssd
+          device: CPU
+  
+      datasets:
+        - name: ms_coco_detection_91_classes
+          data_source: ${WORKSHOP_PATH}/data/datasets/COCO200
+          annotation_conversion: 
+              annotation_file: ${WORKSHOP_PATH}/data/datasets/COCO200/instances_val2017_200pictures.json
+              has_background: True
+              use_full_label_map: True
+              converter: mscoco_detection
+          preprocessing:
+            - type: resize
+              size: 300
+          postprocessing:
+            - type: resize_prediction_boxes
+          metrics:
+            - type: coco_precision
+  
