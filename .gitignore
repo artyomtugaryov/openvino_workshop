@@ -1,3 +1,15 @@
+# Python 
+__pycache__/
+.ipynb_checkpoints
 env
-.ipynb_checkpoints/
-data/public/
+
+# resources of the workshop
+data/datasets/
+data/images/output/combo_output.png
+data/images/output/inference_engine_output.png
+data/images/output/tensorflow_output.png
+data/model.bin
+data/model.xml
+data/public
+data/practice/input.MP4
+data/practice/output.MP4
