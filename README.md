@@ -1,13 +1,13 @@
 # Openvino Workshop
 
 This workshope contains [jupyter notebook](https://jupyter.org/) which describes full [OpenVINO](https://docs.openvinotoolkit.org/) workflow. In this workshop you will try most componrnts of the Openvino Toolkit:
-1. [Model Downloader](https://docs.openvinotoolkit.org/latest/_tools_downloader_README.html)
-2. [Open ModelZoo](https://docs.openvinotoolkit.org/latest/_models_intel_index.html)
-3. [Model Optimizer](https://docs.openvinotoolkit.org/latest/_docs_MO_DG_Deep_Learning_Model_Optimizer_DevGuide.html)
-4. [Inference Engine](https://docs.openvinotoolkit.org/latest/_docs_IE_DG_Deep_Learning_Inference_Engine_DevGuide.html)
-5. [Accuracy Checker](https://docs.openvinotoolkit.org/latest/_tools_accuracy_checker_README.html)
-6. [Post-Training Optimization Toolkit](https://docs.openvinotoolkit.org/latest/_README.html)
-7. [Benchmark Application](https://docs.openvinotoolkit.org/latest/_inference_engine_samples_benchmark_app_README.html)
+1. [Model Downloader](https://docs.openvinotoolkit.org/latest/_tools_downloader_README.html) - tool that downloads models from Open ModelZoo
+2. [Open ModelZoo](https://docs.openvinotoolkit.org/latest/_models_intel_index.html) - set of pre-trained and open-source models that you can use for learning and demo purposes or for developing deep learning software.
+3. [Model Optimizer](https://docs.openvinotoolkit.org/latest/_docs_MO_DG_Deep_Learning_Model_Optimizer_DevGuide.html) - tool that facilitates the transition between the training and deployment environment, performs static model analysis, and adjusts deep learning models for optimal execution on end-point target devices.
+4. [Inference Engine](https://docs.openvinotoolkit.org/latest/_docs_IE_DG_Deep_Learning_Inference_Engine_DevGuide.html) - a unified API to allow high performance inference on many hardware.
+5. [Accuracy Checker](https://docs.openvinotoolkit.org/latest/_tools_accuracy_checker_README.html) 
+6. [Post-Training Optimization Toolkit](https://docs.openvinotoolkit.org/latest/_README.html) - tool designed to convert a model into a more hardware-friendly representation by applying specific methods that do not require re-training, for example, post-training quantization.
+7. [Benchmark Application](https://docs.openvinotoolkit.org/latest/_inference_engine_samples_benchmark_app_README.html) - C++ sample for getting best performance with the OpenVINO Inference Engine.
 8. [Python API for Inference Engine](https://docs.openvinotoolkit.org/latest/_inference_engine_ie_bridges_python_docs_api_overview.html)
 
 
