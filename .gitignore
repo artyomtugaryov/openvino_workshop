@@ -1,7 +1,7 @@
 # Python 
 __pycache__/
 .ipynb_checkpoints
-env
+python_environment
 
 # resources of the workshop
 data/datasets/
