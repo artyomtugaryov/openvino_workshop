@@ -13,11 +13,21 @@ This workshope contains [jupyter notebook](https://jupyter.org/) which describes
 
 ## How to run the workshop
 
+### From Docker
+
+You can find docker image with this notebook by following link: https://hub.docker.com/r/artyomtugaryov/openvino_workshop
+
+To tun this docker use the following link:
+```sh
+    docker run -it artyomtugaryov/openvino_workshop
+```
+
+### From sources
 1. [Install OpenVINO](https://docs.openvinotoolkit.org/latest/_docs_install_guides_installing_openvino_linux.html)
 
 2. Run a bootstrap script to install all dependencies and run the jupyter notebook with the workshop:
 ```bash
-    ./boostrap/boostrap.sh
+    ./bootstrap/bootstrap.sh -start
 ```
 In the successful case you will see the following message:
 ```bash
