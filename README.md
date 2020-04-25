@@ -19,7 +19,7 @@ You can find docker image with this notebook by following link: https://hub.dock
 
 To tun this docker use the following link:
 ```sh
-    docker run -it artyomtugaryov/openvino_workshop
+    docker run -p 8888:8888 -it artyomtugaryov/openvino_workshop
 ```
 
 ### From sources
