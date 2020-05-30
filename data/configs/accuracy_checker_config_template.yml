@@ -11,9 +11,9 @@ models:
   
       datasets:
         - name: ms_coco_detection_91_classes
-          data_source: ${WORKSHOP_PATH}/data/datasets/COCO200
+          data_source: ${WORKSHOP_PATH}/data/datasets/COCO2017/val2017
           annotation_conversion: 
-              annotation_file: ${WORKSHOP_PATH}/data/datasets/COCO200/instances_val2017_200pictures.json
+              annotation_file: ${WORKSHOP_PATH}/data/datasets/COCO2017/annotations/instances_val2017.json
               has_background: True
               use_full_label_map: True
               converter: mscoco_detection
