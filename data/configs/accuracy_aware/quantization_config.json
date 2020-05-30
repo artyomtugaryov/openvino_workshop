@@ -18,13 +18,13 @@
         "datasets": [
             {
                 "name": "dataset",
-                "data_source": "data/datasets/COCO200",
+                "data_source": "data/datasets/COCO2017/val2017",
                 "annotation_conversion": {
-                    "annotation_file": "data/datasets/COCO200/instances_val2017_200pictures.json",
+                    "annotation_file": "data/datasets/COCO2017/annotations/instances_val2017.json",
                     "has_background": true,
                     "use_full_label_map": true,
                     "converter": "mscoco_detection",
-                    "images_dir": "data/datasets/COCO200"
+                    "images_dir": "data/datasets/COCO2017/val2017"
                 },
                 "subsample_size": "100%",
                 "preprocessing": [
