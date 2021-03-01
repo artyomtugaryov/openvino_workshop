@@ -1,19 +1,24 @@
-FROM openvino/ubuntu18_dev_no_samples:latest
+FROM openvino/ubuntu18_dev:latest
 
 USER root
 
 RUN apt update && \
     apt install -y gettext-base \
                    curl \
-                   unzip
+                   unzip \
+                   cmake
 
-WORKDIR ${INTEL_OPENVINO_DIR}/deployment_tools/open_model_zoo/tools/accuracy_checker
+RUN rm -rf ${VENV_TF2}
 
-RUN python3 setup.py install && \
-    rm -rf accuracy_checker.egg-info build dist data/public
+USER openvino
 
-WORKDIR ${INTEL_OPENVINO_DIR}/deployment_tools/tools/post_training_optimization_toolkit
-RUN python3 setup.py install
+WORKDIR ${INTEL_OPENVINO_DIR}/deployment_tools/inference_engine/samples/cpp
+
+RUN ./build_samples.sh && \
+    cd ${HOME}/inference_engine_cpp_samples_build && \
+    ls -1 | grep -E -v 'intel64' | xargs rm -rf && \
+    cd ${HOME}/inference_engine_cpp_samples_build/intel64/Release && \
+    ls -1 | grep -E -v 'benchmark_app|lib' | xargs rm -f
 
 WORKDIR /home/openvino/workshop/
 
