@@ -2,7 +2,10 @@ FROM openvino/ubuntu18_dev_no_samples:latest
 
 USER root
 
-RUN apt update && apt install gettext-base
+RUN apt update && \
+    apt install -y gettext-base \
+                   curl \
+                   unzip
 
 WORKDIR ${INTEL_OPENVINO_DIR}/deployment_tools/open_model_zoo/tools/accuracy_checker
 
