@@ -53,10 +53,11 @@
             {
                 "name": "AccuracyAwareQuantization",
                 "params": {
-                    "maximal_drop": 0.001,
+                    "maximal_drop": 0.01,
                     "metric_subset_ratio": 1,
                     "base_algorithm": "DefaultQuantization",
-                    "ranking_subset_size": 200
+                    "ranking_subset_size": 200,
+                    "stat_subset_size": 200
                 }
             }
         ]
