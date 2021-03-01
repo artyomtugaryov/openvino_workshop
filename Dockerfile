@@ -1,4 +1,4 @@
-FROM openvino/ubuntu18_dev:latest
+FROM openvino/ubuntu18_dev_no_samples:latest
 
 USER root
 
