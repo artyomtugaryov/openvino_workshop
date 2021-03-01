@@ -2,7 +2,7 @@ models:
   - name:  ssd_mobilenet_v2_coco
     launchers:
       - framework: tf
-        model: ${WORKSHOP_PATH}/data/public/ssd_mobilenet_v2_coco/ssd_mobilenet_v2_coco_2018_03_29/frozen_inference_graph.pb
+        model: ${WORKSHOP_PATH}/data/public/ssd_mobilenet_v2_coco/data/public/ssd_mobilenet_v2_coco/ssd_mobilenet_v2_coco_2018_03_29/frozen_inference_graph.pb
         output_names:
           - num_detections
           - detection_scores
