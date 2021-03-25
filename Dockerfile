@@ -1,4 +1,4 @@
-FROM openvino/ubuntu18_dev:latest
+FROM openvino/ubuntu18_dev:2021.3
 
 USER root
 
@@ -9,6 +9,8 @@ RUN apt update && \
                    cmake
 
 RUN rm -rf ${VENV_TF2}
+
+RUN mkdir -p /home/openvino/workshop/ && chown -R openvino /home/openvino/workshop/
 
 USER openvino
 
@@ -31,8 +33,8 @@ COPY --chown=openvino requirements.txt /home/openvino/workshop/requirements.txt
 COPY --chown=openvino utils.py /home/openvino/workshop/utils.py
 
 RUN ${INTEL_OPENVINO_DIR}/deployment_tools/open_model_zoo/tools/downloader/downloader.py --name ssd_mobilenet_v2_coco -o data/
-RUN ${INTEL_OPENVINO_DIR}/deployment_tools/open_model_zoo/tools/downloader/converter.py --name ssd_mobilenet_v2_coco -d data/public/ssd_mobilenet_v2_coco/data/ --precisions FP16
-RUN mv ./data/public/ssd_mobilenet_v2_coco/data/public/ssd_mobilenet_v2_coco/FP16/*xml ./data/model.xml && mv ./data/public/ssd_mobilenet_v2_coco/data/public/ssd_mobilenet_v2_coco/FP16/*bin ./data/model.bin
+RUN ${INTEL_OPENVINO_DIR}/deployment_tools/open_model_zoo/tools/downloader/converter.py --name ssd_mobilenet_v2_coco -d data --precisions FP16
+RUN mv ./data/public/ssd_mobilenet_v2_coco/FP16/*xml ./data/model.xml && mv ./data/public/ssd_mobilenet_v2_coco/FP16/*bin ./data/model.bin
 RUN rm -rf build dist data/public
 
 RUN python3 -m pip install -r requirements.txt
